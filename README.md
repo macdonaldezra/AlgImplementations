@@ -4,7 +4,8 @@ This project consists of Fast Fourier Transform implementations as they are appl
 to polynomial multiplication. The included implementations include one implemented
 recursively and the other iteratively, using butterfly operations. The implemented 
 algorithms in fft.c are implemented directly from Chapter 30 of MIT's Introduction 
-to Algorithms textbook on Fast Fourier Transform.
+to Algorithms textbook on Fast Fourier Transform. Algorithms can both be built and tested
+from the command line, assuming the user has a working installation of gcc.
 
 ### Installation
 The project includes a makefile that creates two executibles, one for generating test
@@ -12,7 +13,7 @@ polynomials to multiply, and the other to compute their product using an FFT.
 
 ##### Name: polyGenerator                                                    
                                                                 
-###### Usage:
+##### Usage: To be executed from the command line
     ./polyGenerator <max_coefficients> <max_coefficient_value>     
                                                                 
 ##### Description:                                                           
@@ -20,7 +21,7 @@ Creates a file in ./resource folder that includes two sets of polynomial coeffic
                                                                              
 ##### Name: polyProduct                                                         
                                                                           
-###### Usage:
+##### Usage: To be executed from the command line
     ./polyProduct <input_file>                                       
                                                                           
 ##### Description:                                                              

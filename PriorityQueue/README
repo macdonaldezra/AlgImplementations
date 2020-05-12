@@ -1,0 +1,41 @@
+Project Name: pex1
+
+Student: Ezra MacDonald #568-967-905
+
+Overview: Program is implemented according to specifications provided at:
+http://csci.viu.ca/~liuh/260/assignments/pex1.html.
+
+Design: Program is implemented with 3 separates modules:
+queue - holds and organizes data entries using a minimum priority binary heap
+and implents it using templates.
+task - holds details for each individual task that is entered by the user.
+main - Implements the task and queue libraries to ensure the program operates
+according to the provided user interaction specifications.
+
+Implementation: pex1 is implemented using a binary mininimum heap. An array 
+implementation is used given that a binary minimum heap is built using a complete tree.  
+Enqueue: adds data entry to the end of the priority queue, then swaps the entry
+up the tree until it is greater than its parent value.
+HeapDown: Ensures that all the child elements of a given key are less than those of
+the parent value and swaps them if it is not the case.
+RemoveMin: Removes the minimum value then calls HeapDown to ensure that the heap
+order is maintained.
+RemoveRandom: Removes random value then swaps random value with first value and calls
+RemoveMin.
+
+Analysis:
+RemoveMin: Removes the minimum element from Queue. Time Complexity of this operation
+is O(logn), since the operation needs to maintain the min-heap property by calling
+HeapDown after removing the minimum element.
+RemoveRandom: Removes a random element from Queue. Time Complexity of this operation is
+O(logn), since the operation places a random element at the beginning of the queue, then
+calles RemoveMin.
+Enqueue: Adds a new value to the Queue. Time Complexity of this operation is O(logn). Enqueue
+adds a new entry to the end of the tree, and travereses up the tree and swaps so long as the
+new element's key is greater than the parent element's key.
+
+Testing: The testing was done by entering data manually into the program during runtime,
+and was done using a batch.txt file that is specified in the specifications link.
+
+Bugs: In the even that a user does not enter a number for their task time, the program
+will run in an infinite loop.

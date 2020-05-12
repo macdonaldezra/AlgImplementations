@@ -1,0 +1,59 @@
+/////////////////////////////////////////////////////////////////////////
+Enter influence  to list the name of the user who can directly and
+	positively influence the most users.
+      controversial  to list the name of the user who can directly
+	influence the most users.
+      outreach user1  to count the total number of users that user1
+	can influence directly, indirectly, positively or negatively.
+      link user1 user2  to list the shortest positive influence
+	from user1 to user2.
+      update user1 user2 edge  to update the influence distance from
+	user1 to user2 with the new edge value provided.
+      help  to show this menu.
+      quit  to quit the program.
+/////////////////////////////////////////////////////////////////////////
+------------------------
+Enter your command: link Oprah Bob
+------------------------
+The shortest path between the two nodes is: 
+Oprah
+Bob
+------------------------
+Enter your command: link Bob Oprah
+------------------------
+The shortest path between the two nodes is: 
+Bob
+Peter
+Oprah
+------------------------
+Enter your command: link Bob Ethan
+------------------------
+The shortest path between the two nodes is: 
+Bob
+Hilda
+Ethan
+------------------------
+Enter your command: link Queenie Gara
+------------------------
+The shortest path between the two nodes is: 
+Queenie
+Gara
+------------------------
+Enter your command: outreach Bob
+------------------------
+The total number of connections for Bob is 19.
+------------------------
+Enter your command: outreach Allen
+------------------------
+The total number of connections for Allen is 19.
+------------------------
+Enter your command: controversial
+------------------------
+Peter has the most influence with 12 connections.
+------------------------
+Enter your command: influence
+------------------------
+Timothy has the most positive influence with 8 connections.
+------------------------
+Enter your command: quit
+------------------------

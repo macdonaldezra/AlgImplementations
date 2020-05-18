@@ -1,5 +1,4 @@
 # General Overview:
--------------------
 This program is a terminal driven run that analyzes connections between users
 specified within a text file. Each user has a name and shares either positive or 
 negative connections with other users. The program uses a graph to store and analyze

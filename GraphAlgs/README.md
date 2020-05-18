@@ -1,18 +1,8 @@
-General Overview:
-This program is a terminal driven run that analyzes connections between users
-specified within a text file. Each user has a name and shares either positive or 
-negative connections with other users. The program uses a graph to store and analyze
-these relationships with support from a queue for breadth first searching.
+# General Overview:
+Program is implements multiple Graph algorithms like BFS and Shortest Path. The data structure
+is used to represent social connections between a list of provided users.
 
-Implementation:
-This program relies on a queue and graph libraries which are implemented in 
-main.cpp. The graph implements a BFS algorithm to find the total 
-number of other users reached within one users network as well as a variance of this
-algorithm to find the shortest path between two users. The remaining algorithms concern
-finding the shortest path between two users or vertices, which are both done using 
-algorithms with runtime O(N^2).
-
-Data Structures:
+### Data Structures:
 Queue - implemented using a growing array that doubles in size each time it reaches
 capacity. Basic empty(), full(), enqueue(), and dequeue() functions have been implemented
 all running in O(1) time. The growing function on the other hand has runtime O(N).
@@ -28,9 +18,3 @@ number of users and E denotes the number of connections between users or edges.
 MaxDegree() & MaxPositiveDegree() - Runs in O(V^2) given that once each Vertex is iterated over, 
 it iterates of every other vertex in the VxV matrix in order to determine the total number of
 edges of a given type that it shares with that vertex.
-
-Testing:
-This program has been tested by loading the data file pex3.data and manipulating said
-data using commands within the specification requirements. A sample run of the program
-is given in the file sampleoutput.txt.
-
